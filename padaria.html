@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Padaria Artesanal & Café</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts (Playfair Display + Inter) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- FontAwesome CDN para Ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        warmBg: '#FAF6F0',
+                        warmCard: '#FFFFFF',
+                        brandBrown: '#4A2E1B',
+                        brandGold: '#D4A359',
+                        brandAccent: '#E8A87C',
+                        whatsappGreen: '#25D366'
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #FAF6F0;
+            color: #332219;
+            font-family: 'Inter', sans-serif;
+        }
+        .font-serif-title {
+            font-family: 'Playfair Display', serif;
+        }
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #FAF6F0;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #D4A359;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between items-center pb-12 antialiased">
+
+    <!-- Container Principal do Linktree/Bio (max-w-md otimizado para mobile) -->
+    <div class="w-full max-w-md px-4 pt-6 pb-8 space-y-6">
+
+        <!-- CABEÇALHO / PERFIL -->
+        <header class="text-center space-y-3">
+            <div class="relative w-28 h-28 mx-auto rounded-full overflow-hidden border-4 border-brandGold shadow-md hover:scale-105 transition-transform duration-300">
+                <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=400&q=80" alt="Logo da Padaria" class="w-full h-full object-cover">
+            </div>
+            <div>
+                <h1 class="text-2xl font-bold font-serif-title text-brandBrown tracking-wide">Pão & Poesia Artesanal</h1>
+                <p class="text-sm font-medium text-brandGold uppercase tracking-widest mt-1">Padaria & Café</p>
+            </div>
+            <p class="text-xs text-gray-600 px-4 italic leading-relaxed">
+                "Pães de fermentação natural, doces finos e o café quentinho esperando por você todos os dias."
+            </p>
+        </header>
+
+        <!-- BOTÃO PRINCIPAL DE AÇÃO - WHATSAPP -->
+        <div class="space-y-3">
+            <a id="whatsappBtn" href="#" target="_blank" class="w-full bg-whatsappGreen text-white py-4 px-6 rounded-2xl shadow-lg flex items-center justify-center space-x-3 text-base font-semibold hover:bg-emerald-600 active:scale-95 transition-all duration-200">
+                <i class="fa-brands me-2 fa-whatsapp text-2xl"></i>
+                <span>Fazer Pedido no WhatsApp</span>
+            </a>
+
+            <!-- BOTÃO ADICIONAL DE LIGAÇÃO RÁPIDA -->
+            <a href="tel:31999998888" class="w-full bg-white text-brandBrown border border-brandGold/30 py-3 px-5 rounded-xl shadow-sm flex items-center justify-center space-x-2 text-sm font-medium hover:bg-amber-50 active:scale-95 transition-all duration-200">
+                <i class="fa-solid fa-phone text-brandGold"></i>
+                <span>Ligar para a Padaria: (31) 99999-8888</span>
+            </a>
+        </div>
+
+        <!-- ENDEREÇO & HORÁRIOS CARD -->
+        <section class="bg-white rounded-2xl p-5 shadow-sm border border-brandGold/20 space-y-4">
+            <div class="flex items-start space-x-3">
+                <div class="bg-amber-100 p-2.5 rounded-xl text-brandBrown mt-0.5">
+                    <i class="fa-solid fa-location-dot text-lg"></i>
+                </div>
+                <div>
+                    <h3 class="text-sm font-bold text-brandBrown">Onde Estamos</h3>
+                    <p class="text-xs text-gray-600 mt-0.5">Rua dos Padeiros, 123 - Bairro Central</p>
+                    <p class="text-xs text-gray-500">Matozinhos - MG</p>
+                    <a href="https://maps.google.com" target="_blank" class="inline-block text-xs font-semibold text-brandGold hover:underline mt-1.5">
+                        <i class="fa-solid fa-map-location-dot me-1"></i> Abrir no Google Maps
+                    </a>
+                </div>
+            </div>
+
+            <hr class="border-gray-100">
+
+            <div class="flex items-start space-x-3">
+                <div class="bg-amber-100 p-2.5 rounded-xl text-brandBrown mt-0.5">
+                    <i class="fa-solid fa-clock text-lg"></i>
+                </div>
+                <div>
+                    <h3 class="text-sm font-bold text-brandBrown">Horário de Funcionamento</h3>
+                    <p class="text-xs text-gray-600 mt-0.5"><strong>Seg a Sáb:</strong> 06:00 às 20:00</p>
+                    <p class="text-xs text-gray-600"><strong>Domingos e Feriados:</strong> 07:00 às 13:00</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO GALERIA DE FOTOS -->
+        <section class="space-y-3">
+            <div class="flex justify-between items-center px-1">
+                <h2 class="text-lg font-bold font-serif-title text-brandBrown">Nossa Galeria</h2>
+                <span class="text-xs text-brandGold italic font-medium">Produtos Fresquinhos</span>
+            </div>
+
+            <!-- Grid de Fotos Limpo e Estático -->
+            <div id="galleryGrid" class="grid grid-cols-2 gap-3">
+                <div class="relative group rounded-xl overflow-hidden shadow-sm aspect-square bg-gray-200">
+                    <img src="https://images.unsplash.com/photo-1549931319-a545dcf3bc73?auto=format&fit=crop&w=400&q=80" alt="Pão Artesanal" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-90 transition-opacity flex items-end p-2.5 text-white text-xs font-medium">Pães de Fermentação Natural</div>
+                </div>
+                <div class="relative group rounded-xl overflow-hidden shadow-sm aspect-square bg-gray-200">
+                    <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=400&q=80" alt="Croissants" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-90 transition-opacity flex items-end p-2.5 text-white text-xs font-medium">Croissants Folhados</div>
+                </div>
+                <div class="relative group rounded-xl overflow-hidden shadow-sm aspect-square bg-gray-200">
+                    <img src="https://images.unsplash.com/photo-1517433670267-08bbd4be890f?auto=format&fit=crop&w=400&q=80" alt="Bolos Caseiros" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-90 transition-opacity flex items-end p-2.5 text-white text-xs font-medium">Bolos Artesanais</div>
+                </div>
+                <div class="relative group rounded-xl overflow-hidden shadow-sm aspect-square bg-gray-200">
+                    <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=400&q=80" alt="Café Espresso" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-90 transition-opacity flex items-end p-2.5 text-white text-xs font-medium">Cafés Especiais</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="text-center text-xs text-gray-500 pt-4 border-t border-gray-200 space-y-2">
+            <p>© <span id="year"></span> Pão & Poesia Padaria Artesanal.</p>
+            <p class="text-[10px] text-gray-400">Desenvolvido com carinho para o seu dia a dia.</p>
+        </footer>
+
+    </div>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // 1. Configuração do Link de WhatsApp
+        const phone = "5531999998888"; // Substitua pelo seu número com DDD (ex: 55 + DDD + número)
+        const message = encodeURIComponent("Olá! Vim pelo Instagram e gostaria de fazer um pedido.");
+        const whatsappLink = `https://wa.me/${phone}?text=${message}`;
+        document.getElementById('whatsappBtn').href = whatsappLink;
+
+        // 2. Ano Atual no Footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
